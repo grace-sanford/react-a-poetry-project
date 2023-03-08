@@ -11,8 +11,7 @@ export const fetchTitlesAsync = createAsyncThunk(
   async () => {
     try {
       const { data } = await axios.get(`https://poetrydb.org/title`);
-      console.log("data", data);
-      return data;
+      return data.titles;
     } catch (err) {
       console.log(err);
     }
@@ -23,9 +22,12 @@ export const fetchTitlesAsync = createAsyncThunk(
 export const titlesSlice = createSlice({
   name: "titles",
   initialState: [],
-  reducers: (builder) => {
+  reducers: [],
+  extraReducers: (builder) => {
     builder
-      .addCase(fetchTitlesAsync.fulfilled, (state, { payload }) => payload)
+      .addCase(fetchTitlesAsync.fulfilled, (state, { payload }) => {
+        return payload;
+      })
       .addCase(fetchTitlesAsync.rejected, (state, action) => {
         return action.error;
       });

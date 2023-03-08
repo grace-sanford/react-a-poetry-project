@@ -4,21 +4,19 @@ import "./index.css";
 import App from "./app/App";
 import reportWebVitals from "./reportWebVitals";
 import { Provider } from "react-redux";
-import store from "./app/store.js"
+import store from "./app/store.js";
 //Change to `HashRouter` as Router from 'react-router-dom' if using Github pages
 import { BrowserRouter as Router } from "react-router-dom";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  
+  <Provider store={store}>
     <React.StrictMode>
       <Router>
-      <Provider store={store}>
         <App />
-        </Provider>
       </Router>
     </React.StrictMode>
- 
+  </Provider>
 );
 
 // If you want to start measuring performance in your app, pass a function
