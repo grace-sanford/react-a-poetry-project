@@ -4,6 +4,7 @@ import { useState } from "react";
 import "../../app/App.css";
 // import { selectTitles, fetchTitlesAsync } from "./titlesSlice";
 import { useListPostsQuery } from "./titlesApi";
+import styles from "../../index.css"
 
 const Titles = () => {
   const [page, setPage] = useState(1);
@@ -26,13 +27,13 @@ const Titles = () => {
   // }, [dispatch]);
 
   return (
-    <div className="App">
+    <div className = "App">
       <h2>Titles</h2>
       {posts.map((poem, i) => {
-        return <div key={`inside titles view ${i}`}>
+        return <ul className="divide-y divide-gray-200" key={`inside titles view ${i}`}>
           <h2>{poem.title}</h2> 
           <p>by {poem.author}</p>
-          </div>;
+          </ul>;
       })}
       <button onClick={() => setPage(page - 1)} isLoading={isFetching}>
         Previous
