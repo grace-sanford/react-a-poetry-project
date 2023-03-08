@@ -1,7 +1,8 @@
-import { useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
+// import { useEffect } from "react";
+import { useState } from "react";
+// import { useDispatch, useSelector } from "react-redux";
 import "../../app/App.css";
-import { selectTitles, fetchTitlesAsync } from "./titlesSlice";
+// import { selectTitles, fetchTitlesAsync } from "./titlesSlice";
 import { useListPostsQuery } from "./titlesApi";
 
 const Titles = () => {
@@ -27,8 +28,11 @@ const Titles = () => {
   return (
     <div className="App">
       <h2>Titles</h2>
-      {posts.titles.map((title, i) => {
-        return <div key={`inside titles view ${i}`}>{title}</div>;
+      {posts.map((poem, i) => {
+        return <div key={`inside titles view ${i}`}>
+          <h2>{poem.title}</h2> 
+          <p>by {poem.author}</p>
+          </div>;
       })}
       <button onClick={() => setPage(page - 1)} isLoading={isFetching}>
         Previous
