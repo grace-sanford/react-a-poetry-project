@@ -4,7 +4,7 @@ export const api = createApi({
   baseQuery: fetchBaseQuery({ baseUrl: "/" }),
   endpoints: (builder) => ({
     listPosts: builder.query({
-      query: (page = 1) => `https://poetrydb.org/random/5?page=${page}`,
+      query: (page = 1) => `https://poetrydb.org/random/10?page=${page}`,
     }),
   }),
 });
