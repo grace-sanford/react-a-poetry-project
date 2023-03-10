@@ -25,7 +25,8 @@ function App() {
     const [draggedItem] = newBox.splice(result.source.index, 1);
     newBox.splice(result.destination.index, 0, draggedItem);
     setBox(newBox);
-    if (result.destination.index === 0 && draggedItem.bg === "slategray"){
+    if ((result.destination.index === 0 && draggedItem.bg === "slategray") || (result.destination.index === 1 && draggedItem.bg === "skyblue")){
+      console.log("TITLES")
       navigate("/titles")
     } else {
       navigate("/poem")
