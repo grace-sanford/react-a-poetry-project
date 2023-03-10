@@ -9,7 +9,7 @@ const Poems = () => {
   const poem = useSelector(selectPoems);
   const [loading, setLoading] = useState(true);
 
-  const { title, author, linecount, lines } = poem;
+  const { title, author, lines } = poem;
 
   useEffect(() => {
     dispatch(fetchPoemAsync());
