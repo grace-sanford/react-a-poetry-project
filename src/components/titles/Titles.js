@@ -17,15 +17,15 @@ const Titles = () => {
 
   return (
     <div className = "App">
-      <h2>Titles</h2>
       {posts.map((poem, i) => {
-        return <ul className="divide-y divide-gray-200 odd:bg-white even:bg-slate-50" key={`inside titles view ${i}`}>
+        return <ul className="text-3xl font-serif font divide-y divide-gray-200 odd:bg-white even:bg-slate-50" key={`inside titles view ${i}`}>
           <li>
           <h2>{poem.title}</h2> 
           <p>by {poem.author}</p>
           </li>
           </ul>;
       })}
+      <label>{page}/{3010/10}</label>
       <button className="rounded bg-sky-500 hover:bg-sky-700" onClick={() => setPage(page - 1)} isLoading={isFetching}>
         Previous
       </button>

@@ -6,7 +6,7 @@ import Poem from "../components/poem/Poem"
 function App() {
   return (
     <div className="App">
-      <h1 className="text-3xl font-bold underline">React Poetry Project</h1>
+      <h1 className="text-4xl font-serif">React,<div>a poetry project</div></h1>
       <Link></Link>
       <Link to="/titles"><button className="rounded bg-sky-500 hover:bg-sky-700" >Titles</button></Link>
       <Link to="/poem"><button className="rounded bg-sky-500 hover:bg-sky-700">Poem</button></Link>

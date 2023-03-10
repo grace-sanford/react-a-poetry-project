@@ -1,9 +1,8 @@
-import '../../app/App.css';
+import "../../app/App.css";
 
 function Poem() {
   return (
-    <div className="App">
-      <h2>Poem</h2>
+    <div className="text-4xl font-serif font-extrabold">
     </div>
   );
 }
