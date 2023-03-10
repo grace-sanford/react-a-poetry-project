@@ -7,7 +7,7 @@ const TitlesAndPoemDnDFeature = ({handleOnDragEnd, box}) => {
       <Droppable droppableId="boxes">
         {(provided) => (
           <ul ref={provided.innerRef} {...provided.droppableProps}>
-            {box.map(({ id, bg }, index) => (
+            {box.map(({ id, label, bg }, index) => (
               <Draggable key={id} draggableId={id.toString()} index={index}>
                 {(provided) => (
                   <li
@@ -15,7 +15,7 @@ const TitlesAndPoemDnDFeature = ({handleOnDragEnd, box}) => {
                     {...provided.dragHandleProps}
                     {...provided.draggableProps}
                   >
-                    <div className={`box ${bg}`}></div>
+                    <div className={`box ${bg} font-serif px-14 py-3`}>{label}</div>
                   </li>
                 )}
               </Draggable>
