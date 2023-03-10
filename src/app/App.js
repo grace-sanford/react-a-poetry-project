@@ -1,7 +1,7 @@
 import "../app/App.css";
 import { Route, Routes, Link, useNavigate } from "react-router-dom";
 import Titles from "../components/titles/Titles";
-import Poem from "../components/poem/Poem";
+import Poems from "../components/poems/Poems";
 import TitlesAndPoemDnDFeature from "../components/toggle/TitlesAndPoemDnDFeature";
 import { useState } from "react";
 
@@ -53,7 +53,7 @@ function App() {
       </Link>
       <Routes>
         <Route path="/titles" element={<Titles />} />
-        <Route path="/poem" element={<Poem />} />
+        <Route path="/poems" element={<Poems />} />
       </Routes>
       <Link to="/poem" className="col-start-5 col-span-1 border-2 self-end">
         <button className="rounded bg-sky-500 hover:bg-sky-700">Poems</button>
