@@ -20,7 +20,7 @@ const Titles = () => {
       {posts.map((poem, i) => {
         return (
           <ul
-            className="text-3xl font-serif hover:font-sans font divide-y divide-gray-200 odd:bg-white even:bg-slate-50"
+            className="text-xl font-serif hover:font-sans font divide-y divide-gray-200 odd:bg-white even:bg-slate-50"
             font-family="Georgia, Arial"
             key={`inside titles view ${i}`}
           >
