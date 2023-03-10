@@ -1,9 +1,8 @@
 import "../app/App.css";
-import { Route, Routes, Link, useNavigate } from "react-router-dom";
-import Titles from "../components/titles/Titles";
-import Poems from "../components/poems/Poems";
+import { Link, useNavigate } from "react-router-dom";
 import TitlesAndPoemDnDFeature from "../components/toggle/TitlesAndPoemDnDFeature";
 import { useState } from "react";
+import AppRoutes from "./AppRoutes";
 
 function App() {
   const navigate = useNavigate();
@@ -41,29 +40,37 @@ function App() {
   //#endregion region TitlesAndPoemsDnD Feature State
 
   return (
-    <div className="App grid grid-cols-6 gap-4">
-      <h1 className="text-4xl font-serif font-semibold border-2 col-start-2 col-span-4">
+    <div className="App grid grid-cols-6 grid-rows-3 gap-4 place-content-stretch">
+      <h1 className="mt-14 text-4xl font-serif font-semibold border-2 col-start-2 col-span-4 row-start-1 row-span-1 self-start">
         React,
       </h1>
-      <p className="text-2xl font-serif font-semibold border-2 col-start-5 col-span-1">
+      <p className="mt-0 text-2xl font-serif font-semibold border-2 col-start-5 col-span-1 row-start-1 row-span-1 self-end">
         a poetry project
       </p>
-      <Link to="/titles" className="col-start-2 col-span-1 border-2 self-start">
-        <button className="rounded bg-sky-500 hover:bg-sky-700">Titles</button>
+      <div className="btn-container col-start-5 col-span-1 row-start-3 row-span-1 self-end text-right">
+      <Link to="home">
+        <button className="rounded bg-sky-500 hover:bg-sky-700">Home</button>
       </Link>
-      <Routes>
-        <Route path="/titles" element={<Titles />} />
-        <Route path="/poems" element={<Poems />} />
-      </Routes>
-      <Link to="/poem" className="col-start-5 col-span-1 border-2 self-end">
+      <Link to="/poems">
         <button className="rounded bg-sky-500 hover:bg-sky-700">Poems</button>
       </Link>
+      <Link to="/about">
+      <button className="rounded bg-sky-500 hover:bg-sky-700">About</button>
+      </Link>
+      <Link to="/titles">
+        <button className="rounded bg-sky-500 hover:bg-sky-700">Titles</button>
+        </Link>
+      </div>
+      <div className="row-start-3 row-span-1 col-start-2 col-span-1 self-end">
       <TitlesAndPoemDnDFeature
-        className="col-start-2 col-span-1 border-2 self-end"
         box={box}
         setBox={setBox}
         handleOnDragEnd={handleOnDragEnd}
       ></TitlesAndPoemDnDFeature>
+      </div>
+      <div className="mt-14 col-start-2 col-span-4 row-start-2 row-span-1 border-2">
+      <AppRoutes />
+      </div>
     </div>
   );
 }

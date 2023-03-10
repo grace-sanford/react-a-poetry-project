@@ -20,13 +20,12 @@ const Titles = () => {
       {posts.map((poem, i) => {
         return (
           <ul
-            className="text-xl font-serif hover:font-sans font divide-y divide-gray-200 odd:bg-white even:bg-slate-50"
+            className="text-xl font-serif hover:font-sans font divide-y divide-gray-400 odd:bg-white even:bg-slate-100"
             font-family="Georgia, Arial"
             key={`inside titles view ${i}`}
           >
             <li>
-              <h2 className="">{poem.title}</h2>
-              <p className="">by {poem.author}</p>
+              <h2 className="">{poem.title} by {poem.author}</h2>
             </li>
           </ul>
         );
