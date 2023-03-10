@@ -35,7 +35,7 @@ function App() {
       console.log("TITLES")
       navigate("/titles")
     } else {
-      navigate("/poem")
+      navigate("/poems")
     }
   }
   //#endregion region TitlesAndPoemsDnD Feature State
