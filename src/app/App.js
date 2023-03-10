@@ -1,6 +1,7 @@
 import "../app/App.css";
 import { Link, useNavigate } from "react-router-dom";
 import TitlesAndPoemDnDFeature from "../components/toggle/TitlesAndPoemDnDFeature";
+import NavBar from "../components/navbar/NavBar"
 import { useState } from "react";
 import AppRoutes from "./AppRoutes";
 
@@ -47,20 +48,7 @@ function App() {
       <p className="mt-0 text-2xl font-serif font-semibold border-2 col-start-5 col-span-1 row-start-1 row-span-1 self-end">
         a poetry project
       </p>
-      <div className="btn-container col-start-5 col-span-1 row-start-3 row-span-1 self-end text-right">
-      <Link to="home">
-        <button className="rounded bg-sky-500 hover:bg-sky-700">Home</button>
-      </Link>
-      <Link to="/poems">
-        <button className="rounded bg-sky-500 hover:bg-sky-700">Poems</button>
-      </Link>
-      <Link to="/about">
-      <button className="rounded bg-sky-500 hover:bg-sky-700">About</button>
-      </Link>
-      <Link to="/titles">
-        <button className="rounded bg-sky-500 hover:bg-sky-700">Titles</button>
-        </Link>
-      </div>
+      <NavBar />
       <div className="row-start-3 row-span-1 col-start-2 col-span-1 self-end">
       <TitlesAndPoemDnDFeature
         box={box}

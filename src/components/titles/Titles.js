@@ -17,36 +17,40 @@ const Titles = () => {
 
   return (
     <div className="App">
-      {posts.map((poem, i) => {
-        return (
-          <ul
-            className="text-xl font-serif hover:font-sans font divide-y divide-gray-400 odd:bg-white even:bg-slate-100"
-            font-family="Georgia, Arial"
-            key={`inside titles view ${i}`}
-          >
-            <li>
-              <h2 className="">{poem.title} by {poem.author}</h2>
-            </li>
-          </ul>
-        );
-      })}
-      <label>
-        {page}/{3010 / 10}
-      </label>
-      <button
-        className="rounded bg-sky-500 hover:bg-sky-700"
-        onClick={() => setPage(page - 1)}
-        isLoading={isFetching}
-      >
-        Previous
-      </button>
-      <button
-        className="rounded bg-sky-500 hover:bg-sky-700"
-        onClick={() => setPage(page + 1)}
-        isLoading={isFetching}
-      >
-        Next
-      </button>
+        {posts.map((poem, i) => {
+          return (
+            <ul
+              className="text-sm font-serif hover:font-sans font divide-y divide-gray-400 odd:bg-white even:bg-slate-100"
+              font-family="Georgia, Arial"
+              key={`inside titles view ${i}`}
+            >
+              <li>
+                <h2 className="text-right">
+                  {poem.title}
+                </h2>
+              </li>
+            </ul>
+          );
+        })}
+        <span>
+        <label className="text-sm">
+          {page}/{3010 / 10}
+        </label>
+        <button
+          className="text-sm rounded bg-sky-500 hover:bg-sky-700"
+          onClick={() => setPage(page - 1)}
+          isLoading={isFetching}
+        >
+          Previous
+        </button>
+        <button
+          className="text-sm rounded bg-sky-500 hover:bg-sky-700"
+          onClick={() => setPage(page + 1)}
+          isLoading={isFetching}
+        >
+          Next
+        </button>
+        </span>
     </div>
   );
 };
