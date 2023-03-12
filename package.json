@@ -1,6 +1,6 @@
 {
-  "homepage": "http://grace-sanford.github.io/react-poetry-project",
-  "name": "react-poetry-project",
+  "homepage": "http://grace-sanford.github.io/react-a-poetry-project",
+  "name": "react-a-poetry-project",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
