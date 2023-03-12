@@ -1,6 +1,6 @@
 const About = () => {
   return (
-    <div className="text-sm font-serif font-light">
+    <div className="mt-0 text-sm font-serif font-light">
       <p>
         Mounted on top of an open source poetry API,{" "}
         <a
@@ -14,19 +14,19 @@ const About = () => {
         3000, or choose Poems to view the first five lines of single randomized
         poem.
       </p>
-      <p className="mt-2">
+      <p className="mt-1">
         Driven by the texture of words, React, a poetry project, is built on the
-        premise that poems bring people together: to insipire, to feel, to
-        create. Integrating principles of minimal design, the app encourages
-        visitors to slow down, observe.
+        premise that poems bring people together: to insipire, feel, and create.
+        Integrating principles of minimal design, the app encourages visitors to
+        slow down, observe.
       </p>
-      <p className="mt-2">
+      <p className="mt-1">
         React, a poetry project utilizes TailwindCSS for utility-first styling,
-        DaisyUI for easily refactorable frontend components, react-beautiful-dnd
-        for a drag and drop, and, of course, React and Redux for maintaining
-        local and global state. Happy poet-ing!
+        DaisyUI for easily refactorable components, react-beautiful-dnd for a
+        drag and drop, and, of course, React and Redux for maintaining local and
+        global state. Happy poet-ing!
       </p>
-      <p className="mt-2 text-right">
+      <p className="mt-1 text-right">
         Technologies: React, Redux, Git, TailwindCSS, DaisyUI, PoetryDB,
         react-beautiful-dnd
       </p>

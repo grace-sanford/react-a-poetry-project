@@ -14,15 +14,12 @@ const Home = () => {
         </li>
       );
     }
-    console.log("html", htmlListItems);
     return htmlListItems;
   };
   const htmlListItems = getPattern();
 
   return (
-    <ul className="grid grid-cols-6 grid-rows-3 gap-4">
-      {htmlListItems}
-    </ul>
+    <ul className="grid grid-cols-6 grid-rows-3 gap-4">{htmlListItems}</ul>
   );
 };
 
