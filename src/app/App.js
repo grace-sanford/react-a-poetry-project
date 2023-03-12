@@ -1,5 +1,5 @@
 import "../app/App.css";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import TitlesAndPoemDnDFeature from "../components/toggle/TitlesAndPoemDnDFeature";
 import NavBar from "../components/navbar/NavBar"
 import { useState } from "react";
@@ -43,7 +43,7 @@ function App() {
   return (
     <div className="App grid grid-cols-6 grid-rows-3 gap-4 place-content-stretch">
       <h1 className="mt-14 text-4xl font-serif font-semibold border-2 col-start-2 col-span-4 row-start-1 row-span-1 self-start">
-        React,
+        <Link to="/*">React,</Link>
       </h1>
       <p className="mt-0 text-2xl font-serif font-semibold border-2 col-start-5 col-span-1 row-start-1 row-span-1 self-end">
         a poetry project
