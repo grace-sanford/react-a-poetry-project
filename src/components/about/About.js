@@ -16,7 +16,7 @@ const About = () => {
       </p>
       <p className="mt-1">
         Driven by the texture of words, React, a poetry project, is built on the
-        premise that poems bring people together: to insipire, feel, and create.
+        premise that poems bring people together: to inspire, feel, and create.
         Integrating principles of minimal design, the app encourages visitors to
         slow down, observe.
       </p>
